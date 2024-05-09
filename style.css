@@ -1,0 +1,17 @@
+body {
+    background-color: gray
+}
+
+button  {
+    padding: 5px 20px;
+    border-style: hidden;
+    border-radius: 20px;
+    color: rgb(239, 239, 239);
+    background-color: rgb(72, 72, 72);
+    font-weight:200;
+}
+
+.buttonBox {
+    display: flex;
+    justify-content: space-around;
+}
