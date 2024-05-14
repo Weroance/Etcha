@@ -13,5 +13,19 @@ button  {
 
 .buttonBox {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+}
+#sketchBox  {
+    border: 2px solid black;
+}
+
+#sketchBoxContainer  {
+   display: flex;
+   justify-content: center;
+   margin: 20px;
+}
+
+#newSketch  {
+    margin-top: 25%
+    /*places sketchBox below the prompt popup*/
 }
