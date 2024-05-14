@@ -1,27 +1,22 @@
 let gridXy = 16;
-let pixelAlpha = "0";
-const pixelColor = "rgba(0, 0, 0, " + pixelAlpha + ")";
+let pixelAlpha = 0;
+const pixelColor = 0;
 const sketchBox = document.querySelector("#sketchBox");
-const newSketch = document.querySelector("#newSketch")
+const newSketch = document.querySelector("#newSketch");
 
-
-//event listener to trigger the function to ...
-
-// create 16 yDivs and create inside of them append 16 divs "pixels" 
-    // and append to sketchBox 
-function createGrid(){
+function createGrid(Color, Alpha){
     for (let i = 1; i < gridXy; i++ ) {
         let yDiv = document.createElement("div");
         for (let i = 1; i < gridXy; i++) {
-            let xDiv = document.createElement("div");
-            xDiv.style.backgroundColor = pixelColor
-            xDiv.style.minWidth = "10px";
-            xDiv.style.minHeight = "10px";
+            let pixel = document.createElement("div");
+            pixel.style.backgroundColor = "grey"
+            pixel.style.minWidth = "10px";
+            pixel.style.minHeight = "10px";
             //border for testing VVV
-            //xDiv.style.border = "1px solid red";
-            yDiv.appendChild(xDiv)
-            xDiv.addEventListener("mouseover", function(evt){
-                evt.target.style.backgroundColor = "rgba( 0, 0, 0, 1)"
+            //pixel.style.border = "1px solid red";
+            yDiv.appendChild(pixel)
+            pixel.addEventListener("mouseover", function(evt){
+                evt.target.style.backgroundColor = Color
             })
         }
         yDiv.style.display = "flex";
@@ -29,15 +24,18 @@ function createGrid(){
         sketchBox.appendChild(yDiv);
     }
 }
-createGrid();
+createGrid("black",);
 
 newSketch.addEventListener("click", function(){
-gridXy = prompt("New grid size?", "16")
-if (gridXy > 100) {
-    gridXy = 100
-}
+    gridXy = prompt("New grid size?", "16")
+    if (gridXy === null)  {
+        return;
+    }
+    if (gridXy > 100) {
+        gridXy = 100
+    }
 sketchBox.textContent = ''
-createGrid()
+createGrid("black")
 })
 
 
