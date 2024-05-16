@@ -55,13 +55,14 @@ function createGrid(){
 createGrid();
 
 newSize.addEventListener("click", function(){
-    gridXy = prompt("New grid size?", "16");
-    if (gridXy == null){
+    newGridXy = prompt("New grid size?", "16");
+    if (newGridXy == null){
         return;
     }
     else if(gridXy > 100) {
         gridXy = 100;
     }
+    gridXy = newGridXy
     sketchBox.textContent = '';
     createGrid();
 });
