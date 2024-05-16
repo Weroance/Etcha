@@ -19,8 +19,8 @@ function createGrid(){
             
             pixel.style.backgroundColor = "black";
             pixel.style.opacity = "0";
-            pixel.style.minWidth = "20px";
-            pixel.style.minHeight = "20px";
+            pixel.style.minWidth = "15px";
+            pixel.style.minHeight = "15px";
             
             yDiv.appendChild(pixel);
             
@@ -56,10 +56,11 @@ createGrid();
 
 newSize.addEventListener("click", function(){
     gridXy = prompt("New grid size?", "16");
-
-    if (gridXy > 100) {
-        gridXy = 100;
+    if (gridXy == null){
         return;
+    }
+    else if(gridXy > 100) {
+        gridXy = 100;
     }
     sketchBox.textContent = '';
     createGrid();
@@ -70,14 +71,4 @@ drawMode.addEventListener("click", function(){
     createGrid();
 })
         
-                
-                
-
-                          
-
-
-//addEventListener for the buttons to createGrid
-
-// EXTRA credit: listen for button
-//                  hover causes random color or "pixel" has random color assignment
-// EXTRA credit II listen for button use %10 shading on each hover event   
+ 
