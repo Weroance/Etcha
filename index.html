@@ -9,16 +9,21 @@
     <body>
         
         <div class="buttonBox">
-            <button id="newSketch">New Sketch</button>
+            <button id="newSize">New Size</button>
         </div>
         
         <div id="sketchBoxContainer">
             <div id="sketchBox"></div>
         </div>
             
-        <div class="buttonBox">
-            <input type="checkbox" id="colorMode">Use Random Colors ----</input>
-            <input type="checkbox" id="shadeMode">Shading Mode</input>
+        <div class="buttonBox" id="radioBox">
+            <input type="radio" id="colorMode" name="drawMode" value="colorMode"/>
+            <label for="colorMode">Rando</label>
+            <input type="radio" id="shadeMode" name="drawMode" value="shadeMode"/>
+            <label for="none">Shady   </label>
+            <input type="radio" id="normalMode" name="drawMode" value="normalMode" checked />
+            <label for="off">Plain Bagel</label>
+
         </div>
         
     </body>
