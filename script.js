@@ -60,7 +60,7 @@ newSize.addEventListener("click", function(){
         return;
     }
     else if(newGridXy > 100) {
-        NewGridXy = 100;
+        newGridXy = 100;
     }
     gridXy = newGridXy
     sketchBox.textContent = '';
