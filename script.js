@@ -3,7 +3,7 @@ let pixelAlpha = 0;
 let pixelColor = 0;
 const sketchBox = document.querySelector("#sketchBox");
 const newSize = document.querySelector("#newSize");
-const drawMode = document.querySelector("#radioBox")
+const radioBox = document.querySelector("#radioBox")
 
 function randomPrimary()    {
     pixelColor = "hsla(" + Math.floor(Math.random() * 360  ) + ", 100%, 50%, 1)";
@@ -67,7 +67,7 @@ newSize.addEventListener("click", function(){
     createGrid();
 });
 
-drawMode.addEventListener("click", function(){
+radioBox.addEventListener("change", function(){
     sketchBox.textContent = '';
     createGrid();
 })
